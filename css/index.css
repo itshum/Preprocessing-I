@@ -139,10 +139,10 @@ h1 {
   line-height: auto;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 2.8rem;
 }
 h3 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   margin-bottom: 20%;
   margin-top: 10%;
 }
@@ -177,7 +177,6 @@ body {
   text-decoration: none;
   color: yellow;
 }
-/* Variables Styles */
 header {
   justify-content: center;
   border-bottom: 1px solid white;
