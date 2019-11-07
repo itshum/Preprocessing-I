@@ -54,10 +54,39 @@ table {
 	font-size: 62.5%;
 }
 
-.container {
-	max-width: 900px;
-	margin: 5% auto;
-}
+	/* Font Styles */
+
+	h1 {
+		font-size: 7.5rem;
+		font-variant: bold;
+		margin: 8% 0;
+		line-height: auto;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	h3 {
+		font-size: 2.8rem;
+		margin-bottom: 20%;
+		margin-top: 10%;
+	}
+
+	h4 {
+		font-size: 1.8rem;
+		margin-top: 4%;
+		margin-bottom: 2%;
+	}
+
+	p {
+		font-size: 1rem;
+		font-style: normal;
+		line-height: 165%;
+	}
+
+
+
 
 html, body {
 	height: 100%; 
@@ -67,7 +96,34 @@ html, body {
 	color: white;
 	width: 900px;
 
+
 }
+
+
+/* Mixin Styles */
+.url-style {
+	a {
+		font-size: 1rem;
+		text-decoration: none;
+		color: white;
+		margin: 20px 0;
+	}
+	
+	a:hover {
+		font-size: 1rem;
+		text-decoration: none;
+		color: yellow;
+	}
+}
+
+
+/* Variables Styles */
+@br: {
+	line-height:5%;
+}
+
+
+
 
 header {
 	display: flex;
@@ -78,45 +134,24 @@ header {
   	display: flex;
   	justify-content: space-between;
 
-}
+	@media( max-width: 500px ) {
+		
+		flex-direction: column;
+		margin: auto;
+		}  /* Closes MQ for centering nav for mobile */
 
+}
 /* Font Styles */
-
-h1 {
-	font-size: 7.5rem;
-	font-variant: bold;
-	margin: 8% 0;
-	line-height: auto;
-}
-
-h2 {
-	font-size: 2rem;
-}
-
-h3 {
-	font-size: 2.8rem;
-	margin-bottom: 20%;
-	margin-top: 10%;
-}
-
-h4 {
-	font-size: 1.8rem;
-	margin-top: 4%;
-	margin-bottom: 2%;
-}
-
-p {
-	font-size: 1rem;
-	font-style: normal;
-	line-height: 165%;
-}
 
 
 
 a {
+	.url-style();
+	
 	font-size: 1rem;
 	text-decoration: none;
 	color: white;
+	line-height: 165%;
 	margin: 20px 0;
 }
 
@@ -126,11 +161,10 @@ a:hover {
 	color: yellow;
 }
 
-button {
-	border: 1 px solid white;
-	font: 1rem;
-
+footer {
+	padding-bottom: 5%;
 }
+
 
 
 .top-content {

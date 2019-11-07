@@ -131,27 +131,6 @@ table {
   box-sizing: border-box;
   font-size: 62.5%;
 }
-.container {
-  max-width: 900px;
-  margin: 5% auto;
-}
-html,
-body {
-  height: 100%;
-  font-family: 'Work Sans', sans-serif;
-  background: black;
-  margin: auto;
-  color: white;
-  width: 900px;
-}
-header {
-  justify-content: center;
-  border-bottom: 1px solid white;
-  margin: 20px 0;
-  padding: 20px 0;
-  display: flex;
-  justify-content: space-between;
-}
 /* Font Styles */
 h1 {
   font-size: 7.5rem;
@@ -177,20 +156,69 @@ p {
   font-style: normal;
   line-height: 165%;
 }
-a {
+html,
+body {
+  height: 100%;
+  font-family: 'Work Sans', sans-serif;
+  background: black;
+  margin: auto;
+  color: white;
+  width: 900px;
+}
+/* Mixin Styles */
+.url-style a {
   font-size: 1rem;
   text-decoration: none;
   color: white;
   margin: 20px 0;
+}
+.url-style a:hover {
+  font-size: 1rem;
+  text-decoration: none;
+  color: yellow;
+}
+/* Variables Styles */
+header {
+  justify-content: center;
+  border-bottom: 1px solid white;
+  margin: 20px 0;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  /* Closes MQ for centering nav for mobile */
+}
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+    margin: auto;
+  }
+}
+/* Font Styles */
+a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+  line-height: 165%;
+  margin: 20px 0;
+}
+a a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+  margin: 20px 0;
+}
+a a:hover {
+  font-size: 1rem;
+  text-decoration: none;
+  color: yellow;
 }
 a:hover {
   font-size: 1rem;
   text-decoration: none;
   color: yellow;
 }
-button {
-  border: 1 px solid white;
-  font: 1rem;
+footer {
+  padding-bottom: 5%;
 }
 .top-content {
   display: flex;
