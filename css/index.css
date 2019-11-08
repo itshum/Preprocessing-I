@@ -130,31 +130,93 @@ table {
 * {
   box-sizing: border-box;
   font-size: 62.5%;
+  border: 1px solid red !important;
 }
 /* Font Styles */
-h1 {
+@media (max-width: 500px) {
+  .container {
+    width: 100vw;
+    margin: 0% 2%;
+  }
+}
+.container h1 {
   font-size: 7.5rem;
   font-variant: bold;
   margin: 8% 0;
   line-height: auto;
 }
-h2 {
+@media (max-width: 500px) {
+  .container h1 {
+    font-size: 3.5rem;
+    line-height: auto;
+  }
+}
+.container h2 {
   font-size: 2.8rem;
 }
-h3 {
+@media (max-width: 500px) {
+  .container h2 {
+    font-size: 2rem;
+    line-height: auto;
+  }
+}
+.container h3 {
   font-size: 2.5rem;
   margin-bottom: 20%;
   margin-top: 10%;
 }
-h4 {
+@media (max-width: 500px) {
+  .container h3 {
+    font-size: 1.5rem;
+    margin: auto;
+    line-height: auto;
+    margin-top: 6%;
+  }
+}
+.container h4 {
   font-size: 1.8rem;
   margin-top: 4%;
   margin-bottom: 2%;
 }
-p {
+@media (max-width: 500px) {
+  .container h4 {
+    font-size: 1.3rem;
+    line-height: auto;
+  }
+}
+.container p {
   font-size: 1rem;
   font-style: normal;
   line-height: 165%;
+}
+@media (max-width: 500px) {
+  .container p {
+    font-size: 0.8rem;
+    line-height: auto;
+  }
+}
+.container a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+  margin: 20px 0;
+}
+@media (max-width: 500px) {
+  .container a {
+    font-size: 0.8rem;
+    line-height: auto;
+  }
+}
+.container a:hover {
+  font-size: 1rem;
+  text-decoration: none;
+  color: yellow;
+}
+@media (max-width: 500px) {
+  .container a:hover {
+    font-size: 0.8rem;
+    line-height: auto;
+  }
 }
 html,
 body {
@@ -165,17 +227,12 @@ body {
   color: white;
   width: 900px;
 }
-/* Mixin Styles */
-.url-style a {
-  font-size: 1rem;
-  text-decoration: none;
-  color: white;
-  margin: 20px 0;
-}
-.url-style a:hover {
-  font-size: 1rem;
-  text-decoration: none;
-  color: yellow;
+@media (max-width: 500px) {
+  html,
+  body {
+    width: 100vw;
+    margin: auto;
+  }
 }
 header {
   justify-content: center;
@@ -188,28 +245,27 @@ header {
 }
 @media (max-width: 500px) {
   header {
+    display: flex;
     flex-direction: column;
-    margin: auto;
+    align-items: center;
+    margin-top: 4%;
+    width: 100vw;
   }
 }
-/* Font Styles */
+@media (max-width: 500px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: space-evenly;
+  }
+}
 a {
   font-size: 1rem;
   text-decoration: none;
   color: white;
   line-height: 165%;
   margin: 20px 0;
-}
-a a {
-  font-size: 1rem;
-  text-decoration: none;
-  color: white;
-  margin: 20px 0;
-}
-a a:hover {
-  font-size: 1rem;
-  text-decoration: none;
-  color: yellow;
 }
 a:hover {
   font-size: 1rem;

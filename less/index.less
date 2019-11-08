@@ -52,6 +52,7 @@ table {
 * {
 	box-sizing: border-box;
 	font-size: 62.5%;
+	border: 1px solid red !important;
 }
 
 
@@ -62,41 +63,98 @@ table {
 @h3-fnt-sz: 2.5rem;
 @h4-fnt-sz: 1.8rem;
 @p-fnt-sz: 1rem;
-
+@footer:.5rem;
 
 
 	/* Font Styles */
 
+
+.container {
+
+	@media( max-width: 500px ) {
+		width:100vw;
+		margin: 0% 2%;
+	}
+	
 	h1 {
 		font-size: @h1-fnt-sz;
 		font-variant: bold;
 		margin: 8% 0;
 		line-height: auto;
+
+		@media( max-width: 500px ) {
+			font-size: 3.5rem;
+			line-height: auto;
+		}
+
 	}
 
 	h2 {
 		font-size: @h2-fnt-sz;
+		
+		@media( max-width: 500px ) {
+			font-size: 2rem;
+			line-height: auto;
+		}
+
 	}
 
 	h3 {
 		font-size: @h3-fnt-sz;
 		margin-bottom: 20%;
 		margin-top: 10%;
+
+		@media( max-width: 500px ) {
+			font-size: 1.5rem;
+			margin: auto;
+			line-height: auto;
+			margin-top: 6%;
+		}
+
+
 	}
 
 	h4 {
 		font-size: @h4-fnt-sz;
 		margin-top: 4%;
 		margin-bottom: 2%;
+
+		@media( max-width: 500px ) {
+			font-size: 1.3rem;
+			line-height: auto;
+		}
+
 	}
 
 	p {
 		font-size: @p-fnt-sz;
 		font-style: normal;
 		line-height: 165%;
+
+		@media( max-width: 500px ) {
+			font-size: .8rem;
+			line-height: auto;
+		}
+
 	}
 
+	a {
+		.url-style();
+		@media( max-width: 500px ) {
+			font-size: .8rem;
+			line-height: auto;
+		}
+	}
 
+	a:hover {
+		.url-style-hover();
+		@media( max-width: 500px ) {
+			font-size: .8rem;
+			line-height: auto;
+		}
+	}
+
+}
 
 
 html, body {
@@ -107,23 +165,26 @@ html, body {
 	color: white;
 	width: 900px;
 
+	@media( max-width: 500px ) {
+		width: 100vw;
+		margin: auto;
+	}
+
 }
 
 
-/* Mixin Styles */
-.url-style {
-	a {
-		font-size: 1rem;
-		text-decoration: none;
-		color: white;
-		margin: 20px 0;
-	}
-	
-	a:hover {
-		font-size: 1rem;
-		text-decoration: none;
-		color: @link-color;
-	}
+// Mixins Styles //
+.url-style() {
+	font-size: 1rem;
+	text-decoration: none;
+	color: white;
+	margin: 20px 0;
+}
+
+.url-style-hover() {
+	font-size: 1rem;
+	text-decoration: none;
+	color: @link-color;
 }
 
 
@@ -140,14 +201,26 @@ header {
   	justify-content: space-between;
 
 	@media( max-width: 500px ) {
-		
+		display: flex;
 		flex-direction: column;
-		margin: auto;
-		}  /* Closes MQ for centering nav for mobile */
+		align-items: center;
+		margin-top: 4%;
+		width: 100vw;
+		
+	}  /* Closes MQ for centering nav for mobile */
 
 }
-/* Font Styles */
 
+nav {
+	@media( max-width: 500px ) {
+		display: flex;
+		flex-direction: row;
+		width: 100vw;
+		justify-content: space-evenly;
+		
+	} 
+
+}
 
 
 a {
