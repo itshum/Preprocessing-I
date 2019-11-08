@@ -130,7 +130,6 @@ table {
 * {
   box-sizing: border-box;
   font-size: 62.5%;
-  border: 1px solid red !important;
 }
 /* Font Styles */
 @media (max-width: 500px) {
